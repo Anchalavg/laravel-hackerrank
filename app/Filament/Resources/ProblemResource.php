@@ -26,6 +26,8 @@ class ProblemResource extends Resource
             ->schema([
                 Forms\Components\TextInput::make('title'),
                 Forms\Components\TextInput::make('description'),
+                Forms\Components\TextInput::make('constraints'),
+                Forms\Components\TextInput::make('example'),
                 Forms\Components\Select::make('difficulty')
                 ->options([
                     'easy' => 'easy',
@@ -44,6 +46,8 @@ class ProblemResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('title')->searchable(),
                 Tables\Columns\TextColumn::make('description'),
+                Tables\Columns\TextColumn::make('constraints'),
+                Tables\Columns\TextColumn::make('example'),
                 Tables\Columns\TextColumn::make('difficulty'),
                 Tables\Columns\TextColumn::make('category.id')->searchable(),
 

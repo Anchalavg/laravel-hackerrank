@@ -16,6 +16,9 @@ export default function Question_code({ auth, question_data }) {
                 <div className="flex-1 p-4">
                     <div className='font-medium text-lg mb-6'>{question_data.title}</div>
                     <div className="text-base">{question_data.description}</div>
+                    <div className="text-base">{question_data.constraints}</div>
+                    <div className="text-base">{question_data.example}</div>
+                    
                 </div>
                 <div className='flex-1 p-4'>
                     <Editor value={question_data.python_driver_code} language='python' className='h-80' onChange={(val => setCurrentCode(val))}/>
